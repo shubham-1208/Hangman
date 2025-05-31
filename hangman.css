@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f0f5ff;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.timer, .score {
+  font-weight: bold;
+}
+
+.hangman-container {
+  margin: 20px auto;
+}
+
+.hangman-drawing {
+  margin: auto;
+  display: block;
+}
+
+.hangman-part {
+  stroke: #2c3e50;
+  stroke-width: 4;
+  fill: transparent;
+  display: none;
+}
+
+#base, #pole, #beam, #rope {
+  display: block;
+}
+
+.word-display {
+  margin: 20px 0;
+  font-size: 2rem;
+  letter-spacing: 10px;
+  min-height: 50px;
+}
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.key {
+  width: 40px;
+  height: 40px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.key:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+.key.used {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.key.correct {
+  background-color: #2ecc71;
+}
+
+.key.wrong {
+  background-color: #e74c3c;
+}
+
+.game-message {
+  font-size: 1.5rem;
+  margin: 15px 0;
+  min-height: 40px;
+  color: #2c3e50;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#reset-btn {
+  background-color: #e74c3c;
+}
+
+#reset-btn:hover {
+  background-color: #c0392b;
+}
+
+.hint {
+  margin-top: 15px;
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+@media (max-width: 600px) {
+  .key {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+  
+  .word-display {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+  }
+}
